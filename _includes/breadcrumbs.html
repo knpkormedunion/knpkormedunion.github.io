@@ -1,0 +1,37 @@
+<!-- <div id="breadcrumbs" class="cpathway">
+    {% assign crumbs = page.url | remove:'/index.html' | split: '&rarr;' %}
+    {{ crumbs }}
+    <a href="/">{{ site.title }}</a>
+    {% for crumb in crumbs offset: 1 %}
+        {% if forloop.last %}
+        &rarr; {{ page.title }}
+        {% else %}
+        &rarr; <a
+                href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
+        {% endif %}
+    {% endfor %}
+</div> -->
+
+<div class="cpathway">
+    {% assign crumbs = page.url | split: '/' %}
+
+
+
+    <span class="breadcrumbs pathway">
+        {% if page.url == '/' %}
+            {{ site.title }}
+        {% else %}
+            <a href="/" class="pathway">{{ site.title }}</a>
+        {% endif %}
+
+        {% for crumb in crumbs | offset: 1 %}
+            {% assign crumb_index = forloop.index %}
+
+            {% if forloop.last %}
+                {{ crumb }}
+            {% else %}
+                <a href="/{{ crumb }}" class="pathway">{{ crumb }}</span>
+            {% endif %}
+        {% endfor %}
+    </span>
+</div>

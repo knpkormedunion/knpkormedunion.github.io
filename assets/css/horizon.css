@@ -1,0 +1,27 @@
+/**
+ * CSS File
+ *
+ * @package      "Horizon Slim"
+ * @version      0.2.6_RC3
+ *
+ * @description  A horizontal Accordion Slider for various purposes
+ *
+ * @author       Jan Jost <support@negetics.de>
+ * @link         http://www.negetics.de
+ * @linkProject  http://extensions.negetics.de
+ * @copyright    Copyright (C) 2010 Jan Jost! All Rights Reserved
+ * @license      GNU/GPLv3 see GPL.txt
+ */
+ul.neHS 																				{ list-style:none; display:block; overflow:hidden; position:relative; margin:0; padding:0; text-align:left;}
+ul.neHS li.neHS 																{ float:left; display:inline; overflow:hidden; position:relative; margin:0; padding:0; }
+ul.neHS li.neHS div 														{  }
+ul.neHS li.neHS div.neHSc 											{ position:relative; overflow:hidden; margin:0; padding:0; }
+ul.neHS li.neHS div.first 											{ border-left:none; }
+ul.neHS li.neHS div.neHSc div.neHSi 						{ position:absolute; cursor:pointer; margin:0; padding:0; }
+ul.neHS li.neHS div.neHSc div.neHSiO 						{ position:absolute; cursor:pointer; margin:0; padding:0; }
+ul.neHS li.neHS div.neHSc div.neHSf 						{ position:absolute; opacity:0.8; background:#000; cursor:pointer; margin:0; padding:0; }
+ul.neHS li.neHS div.neHSc a.neHoLi 							{ position:absolute; display:block; margin:0; padding:0; }
+ul.neHS li.neHS div.neHSc div.neHSb 						{ position:absolute; margin:0; padding:0; }
+ul.neHS li.neHS div.neHSc div.neHSb div.neHSbb 	{ position:absolute; margin:0; padding:0; background:#000; cursor:pointer; }
+ul.neHS li.neHS div.neHSc div.neHSb div.neHSbt 	{ position:absolute; padding:7px 10px 7px 10px; color:#fff; }
+ul.neHS li.neHS div.neHSc a.neHSli							{ position:absolute; }
