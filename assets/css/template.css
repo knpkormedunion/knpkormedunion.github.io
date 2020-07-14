@@ -890,7 +890,12 @@ div.module_menu ul li a:link, div.module_menu ul li a:visited {
 	background: transparent url(../images/box_h3.png) no-repeat top center;
 }
 
- #rightcolumn h3 {
+#leftcolumn h3 + .module__content {
+	margin-left: 22px;
+}
+
+.module__content ul {
+	padding-left: 25px;
 }
 
 .moduletable_menu, .moduletable, .moduletable_text {
