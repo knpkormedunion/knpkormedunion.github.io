@@ -1,9 +1,6 @@
-<a href="/" class="logo">{{ site.title }}</a>
-<div id="pillmenu">
-    <ul id="mainlevel-nav">
-        <li><a href="/index.php?option=com_content&amp;view=frontpage&amp;Itemid=60"
-                class="mainlevel-nav">Головна</a></li>
-        <li><a href="/index.php?option=com_contact&amp;view=category&amp;catid=12&amp;Itemid=82"
-                class="mainlevel-nav">Контакти</a></li>
-    </ul>
+<div class="navbar">
+    <a href="/" class="navbar__logo">{{ site.title }}</a>
+    <nav class="navbar__nav">
+        {% for nav-item in site.data.navbar-nav %}<a href="{{ nav-item.to }}" class="nav__item">{{ nav-item.label }}</a>{% endfor %}
+    </nav>
 </div>

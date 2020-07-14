@@ -9,8 +9,8 @@ defaults:
     values:
       image: true
 
-plugins:
-  - jekyll-feed
+sass:
+  style: compressed
 
 exclude:
   - run.sh

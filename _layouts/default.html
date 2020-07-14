@@ -1,48 +1,39 @@
 <!DOCTYPE html>
 <html lang="uk-ua">
     <head>
-        <title>{{ page.title }} - {{ site.title }}</title>
+        <title>{{ page.title }} | {{ site.title }}</title>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="/assets/css/template.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
 
         <link rel="stylesheet" href="/assets/css/horizon.css">
         <script src="/assets/js/horizon.slim.0.2.js"></script>
     </head>
-    <body id="page_bg">
-        <div id="wrapper">
-            <div id="wrapper_content">
-                <div id="header">
+    <body>
+        <div class="wrapper">
+            <div class="wrapper__content">
+                <header class="header">
                     {% include header/navbar.html %}
-                    <div class="clr"></div>
-                    {% include header/search.html %}
-                        <!-- TODO: эта часть находится в картинке. Надо переделать из картинки в норм хтмл. Кароче, рефакторинг -->
-                        <div class="newstitle">
-                            <h1>{{ site.fulltitle }}</h1>
+                    <div class="jumbotron">
+                        <div class="jumbotron__header">
+                            <img src="/images/image27.jpeg" alt='{{ site.title }}'>
                         </div>
-                        {% include header/slider.html %}
-                    {% include breadcrumbs.html %}
-                    <div class="clr"></div>
-                </div>
-                <div id="content">
-                    <div class="middle_left">
-                        <div class="bottom_left">
-                            <div class="top_left">
-                                <div id="holder">
-                                    <div id="leftcolumn">
-                                        {% include sidebar.html %}
-                                    </div>
-                                    <div id="maincolumn_left">
-                                        {{ content }}
-                                    </div>
-                                    <div class="clr"></div>
-                                </div>
-                            </div>
+                        <div class="jumbotron__details">
+                            {% include header/search.html %}
+                            <h1>{{ site.fulltitle }}</h1>
+                            {% include header/slider.html %}
                         </div>
                     </div>
+                </header>
+                <div class="content">
+                    {% include breadcrumbs.html %}
+                    <div class="content__grid">
+                        <aside class="sidebar">{% include sidebar.html %}</aside>
+                        <main class="content__main">{{ content }}</main>
+                    </div>
                 </div>
-                <div id="footer">
-                    Copyright &copy; 2020 {{ site.title }}</a>
-                </div>
+                <footer class="footer">
+                    Copyright &copy; 2020 {{ site.title }}
+                </footer>
             </div>
         </div>
     </body>

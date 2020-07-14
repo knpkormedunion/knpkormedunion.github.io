@@ -1,18 +1,16 @@
 {% for section in site.data.sidebar %}
-    <div class="module">
-        <h3>{{ section.label }}</h3>
+    <div class="sidebar__block">
+        <h3 class="block__title">{{ section.label }}</h3>
         {% if section.links %}
-            <ul class="menu">
+            <nav class="block__menu">
                 {% for link in section.links %}
-                    <li{% if link.to == page.url %} id="current"{% endif %}>
-                        <a href={{ link.to }}>{{ link.label }}</a>
-                    </li>
+                    <a href="{{ link.to }}" class="menu__item{% if link.to == page.url %} menu__item_active{% endif %}">{{ link.label }}</a>
                 {% endfor %}
-            </ul>
+            </nav>
         {% elsif section.content %}
-            <div class="module__content">{{ section.content }}</div>
+            <div class="block__content">{{ section.content }}</div>
         {% elsif section.include_content %}
-            <div class="module__content">{% include {{ section.include_content }} %}</div>
+            <div class="block__content">{% include {{ section.include_content }} %}</div>
         {% endif %}
     </div>
 {% endfor %}
