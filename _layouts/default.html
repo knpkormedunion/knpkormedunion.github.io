@@ -28,7 +28,12 @@
                     {% include breadcrumbs.html %}
                     <div class="content__grid">
                         <aside class="sidebar">{% include sidebar.html %}</aside>
-                        <main class="content__main">{{ content }}</main>
+                        <main class="content__main">
+                            <h2 class="main__title">{{ page.title }}</h2>
+                            <div class="main__content">
+                                {{ content }}
+                            </div>
+                        </main>
                     </div>
                 </div>
                 <footer class="footer">

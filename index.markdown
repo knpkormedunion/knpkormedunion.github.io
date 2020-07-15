@@ -1,6 +1,6 @@
 ---
-title: Головна
-permalink: /
+title: Коротко про об'єднання
+permalink: "/"
 layout: default
 ---
 
