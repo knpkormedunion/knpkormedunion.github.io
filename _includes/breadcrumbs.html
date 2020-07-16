@@ -1,6 +1,7 @@
 <div class="cpathway">
     {% assign crumbs = page.url | split: '/' %}
 
+    <!-- TODO: добавить поддержку "глубоких" адресов (типа http://localhost:4000/structure/test и т.п.) -->
     <span class="breadcrumbs pathway">
         {% if page.url == '/' %}
             {{ site.title }}

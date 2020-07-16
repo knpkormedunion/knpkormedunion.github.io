@@ -29,35 +29,51 @@
         "links": [
             {
                 "label": "Психіатричне відділення №1",
-                "to": "#"
+                "to": "/structure/psychiatric-department-1"
             },
             {
                 "label": "Психіатричне відділення №2",
-                "to": "#"
+                "to": "/structure/psychiatric-department-2"
             },
             {
                 "label": "Психіатричне дитяче відділення №3",
-                "to": "#"
+                "to": "/structure/psychiatric-children-department-3"
             },
             {
                 "label": "Психіатричне відділення №4",
-                "to": "#"
+                "to": "/structure/psychiatric-department-4"
             },
             {
                 "label": "Психіатричне відділення №5",
-                "to": "#"
+                "to": "/structure/psychiatric-department-5"
             },
             {
                 "label": "Психіатричне відділення №6",
-                "to": "#"
+                "to": "/structure/psychiatric-department-6"
             },
             {
                 "label": "Психіатричне відділення №7",
-                "to": "#"
+                "to": "/structure/psychiatric-department-7"
             },
             {
                 "label": "Психіатричне відділення ветеранів війни №8",
-                "to": "#"
+                "to": "/structure/psychiatric-department-of-war-veterans-8"
+            },
+            {
+                "label": "Клінічна лабораторія",
+                "to": "/structure/clinical-laboratory"
+            },
+            {
+                "label": "Аптека",
+                "to": "/structure/pharmacy"
+            },
+            {
+                "label": "Відділ кадрів",
+                "to": "/structure/human-resources-department"
+            },
+            {
+                "label": "Приймальне відділення",
+                "to": "/structure/reception-department"
             }
         ]
     },
@@ -66,19 +82,19 @@
         "links": [
             {
                 "label": "План держзакупівель",
-                "to": "#"
+                "to": "/scientific-information/public-procurement-plan"
             },
             {
                 "label": "Потрібна допомога",
-                "to": "#"
+                "to": "/scientific-information/need-help"
             },
             {
                 "label": "Наші партнери",
-                "to": "#"
+                "to": "/scientific-information/partners"
             },
             {
                 "label": "Висловлюємо подяку",
-                "to": "#"
+                "to": "/scientific-information/gratitude"
             }
         ]
     },
@@ -87,11 +103,11 @@
         "links": [
             {
                 "label": "Благодійні внески",
-                "to": "#"
+                "to": "/reporting/charitable-contributions"
             },
             {
                 "label": "Лікарські засоби",
-                "to": "#"
+                "to": "/reporting/medicines"
             }
         ]
     },
@@ -100,7 +116,7 @@
         "links": [
             {
                 "label": "Антикорупційна програма",
-                "to": "#"
+                "to": "/anti-corruption-program"
             }
         ]
     }

@@ -28,9 +28,21 @@ a {
     color: map-get($colors, secondary);
 }
 
-img.img-fluid {
-    max-width: 100%;
-    max-height: 100%;
+img.img {
+    &_fluid {
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+
+    &_left {
+        float: left;
+        margin: 10px 10px 10px 0;
+    }
+
+    &_right {
+        float: right;
+        margin: 10px 0 10px 10px;
+    }
 }
 
 .wrapper {
@@ -210,6 +222,14 @@ main {
 
     &__content {
         margin-top: 12px;
+
+        img {
+            max-width: 260px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
     }
 }
 
