@@ -164,26 +164,42 @@ a.slimLink, a.slimLink:link, a.slimLink:visited {
 }
 
 /* BREADCRUMBS */
-.cpathway img {
-	float: left;
-	padding: 4px 6px 0 0;
-}
+.breadcrumb {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    position: relative;
+    
+    &__item {
+        position: relative;
+        &:last-child {
+            pointer-events: none;
+            
+            .breadcrumb__link {
+                color: map-get($colors, primary);
+            }
+        }
 
-span.breadcrumbs.pathway {
-	color: #488ff0;
-}
+        &:not(:first-child) {
+            margin-left: 16px;
 
-span.breadcrumbs.pathway a.pathway  {
-	float:left;
-	margin:0;
-	padding:0 6px 0 0;
-	color:#797979;
-	font-weight:400;
-	text-decoration: none;
-}
-
-span.breadcrumbs.pathway a.pathway:hover {
-	text-decoration: underline;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 6px;
+                height: 7px;
+                top: 7px;
+                left: -11px;
+                background: url(/assets/images/arrow.png);
+            }
+        }
+    }
+    
+    &__link {
+        text-decoration: none;
+        color: #797979;
+    }
 }
 
 /* CONTENT */
