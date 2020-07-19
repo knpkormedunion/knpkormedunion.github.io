@@ -1,100 +1,28 @@
-<div class="newsflash only">
-    <div class="module_clear">
-        <div>
-            <div>
-                <div>
-                    <ul id="sm46" class="neHS" style="height:120px; width:635px;">
-                        <li class="neHS">
-                            <div class="neHSc first" style="height:120px; width:500px;">
-                                <div class="neHSi"
-                                    style="background-image: url('/images/banners/psycho2.jpg'); height:120px; width:500px;">
-                                </div>
-                                <div style="width:500px; height:60px; " class="neHSb">
-                                    <div class="neHSbb"></div>
-                                    <div class="neHSbt">
-                                        <p><a class="slimLink"
-                                                href="/index.php?option=com_content&amp;view=article&amp;id=57&amp;Itemid=71">
-                                                &#1055;&#1089;&#1080;&#1093;&#1110;&#1072;&#1090;&#1088;&#1110;&#1103;</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div style="width:500px; height:120px;" class="neHSf"></div>
-                            </div>
-                        </li>
-                        <li class="neHS">
-                            <div class="neHSc middle" style="height:120px; width:500px;">
-                                <div class="neHSi"
-                                    style="background-image: url('/images/banners/narco.jpg'); height:120px; width:500px;">
-                                </div>
-                                <div style="width:500px; height:60px; " class="neHSb">
-                                    <div class="neHSbb"></div>
-                                    <div class="neHSbt">
-                                        <p><a class="slimLink"
-                                                href="/index.php?option=com_content&amp;view=article&amp;id=56&amp;Itemid=72">
-                                                &#1053;&#1072;&#1088;&#1082;&#1086;&#1083;&#1086;&#1075;&#1110;&#1103;</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div style="width:500px; height:120px;" class="neHSf"></div>
-                            </div>
-                        </li>
-                        <li class="neHS">
-                            <div class="neHSc middle" style="height:120px; width:500px;">
-                                <div class="neHSi"
-                                    style="background-image: url('/images/banners/neiro.jpg'); height:120px; width:500px;">
-                                </div>
-                                <div style="width:500px; height:60px; " class="neHSb">
-                                    <div class="neHSbb"></div>
-                                    <div class="neHSbt">
-                                        <p><a class="slimLink"
-                                                href="/index.php?option=com_content&amp;view=article&amp;id=62&amp;Itemid=77">
-                                                &#1053;&#1077;&#1081;&#1088;&#1086;&#1093;&#1110;&#1088;&#1091;&#1088;&#1075;&#1110;&#1103;</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div style="width:500px; height:120px;" class="neHSf"></div>
-                            </div>
-                        </li>
-                        <li class="neHS">
-                            <div class="neHSc middle" style="height:120px; width:500px;">
-                                <div class="neHSi"
-                                    style="background-image: url('/images/banners/reabi.jpg'); height:120px; width:500px;">
-                                </div>
-                                <div style="width:500px; height:60px; " class="neHSb">
-                                    <div class="neHSbb"></div>
-                                    <div class="neHSbt">
-                                        <p><a class="slimLink"
-                                                href="/index.php?option=com_content&amp;view=article&amp;id=63&amp;Itemid=79">
-                                                &#1056;&#1077;&#1072;&#1073;&#1110;&#1083;&#1110;&#1090;&#1072;&#1094;&#1110;&#1103;</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div style="width:500px; height:120px;" class="neHSf"></div>
-                            </div>
-                        </li>
-                        <li class="neHS">
-                            <div class="neHSc middle" style="height:120px; width:500px;">
-                                <div class="neHSi"
-                                    style="background-image: url('/images/banners/geronto.jpg'); height:120px; width:500px;">
-                                </div>
-                                <div style="width:500px; height:60px; " class="neHSb">
-                                    <div class="neHSbb"></div>
-                                    <div class="neHSbt">
-                                        <p><a class="slimLink"
-                                                href="/index.php?option=com_content&amp;view=article&amp;id=59&amp;Itemid=74">
-                                                &#1043;&#1077;&#1088;&#1086;&#1085;&#1090;&#1086;&#1083;&#1086;&#1075;&#1110;&#1095;&#1085;&#1077;
-                                                &#1074;&#1110;&#1076;&#1076;&#1110;&#1083;&#1077;&#1085;&#1085;&#1103;</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div style="width:500px; height:120px;" class="neHSf"></div>
-                            </div>
-                        </li>
-                    </ul>
-                    <script
-                        type="text/javascript">var slideMenu46 = new horizon(); slideMenu46.build("sm46", 500, 10, 10, 1, false, true, false, 0, 0.04, 0.1, false, 1, 1, true, true, 8, 8000, 0.4, false, false);</script>
+<div class="slider">
+    <ul id="sm46" class="neHS" style="height:120px; width:635px;">
+        {% for sliderItem in site.data.slider %}
+            <li class="neHS">
+                <div class="neHSc {% if forloop.first %}first{% else %}middle{% endif %}" style="height:120px; width:500px;">
+                    <div class="neHSi"
+                        style="background-image: url('{{ sliderItem.imageUrl }}'); height:120px; width:500px;">
+                    </div>
+                    <div style="width:500px; height:60px; " class="neHSb">
+                        <div class="neHSbb"></div>
+                        <div class="neHSbt">
+                            <p>
+                                <a class="slimLink" href="{{ sliderItem.linkTo }}">
+                                    {{ sliderItem.label }}
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div style="width:500px; height:120px;" class="neHSf"></div>
                 </div>
-            </div>
-        </div>
-    </div>
+            </li>
+        {% endfor %}
+    </ul>
+    <script type="text/javascript">
+        const slideMenu46 = new horizon();
+        slideMenu46.build("sm46", 500, 10, 10, 1, false, true, false, 0, 0.04, 0.1, false, 1, 1, true, true, 8, 8000, 0.4, false, false);
+    </script>
 </div>

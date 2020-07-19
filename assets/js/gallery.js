@@ -10,7 +10,6 @@ const setImageSizes = galleryItem => {
 }
 
 const openModal = galleryItem => {
-    console.log(event)
     galleryItem.classList.toggle('gallery__item_active');
 }
 

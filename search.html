@@ -1,0 +1,73 @@
+---
+title: Пошук
+permalink: "/search"
+layout: default
+---
+
+<form action="/search" method="get">
+    <label>
+        Пошук за ключовими словами:
+        <input type="text" id="keywordsInput" name="search">
+        <button>Пошук</button>
+    </label>
+</form>
+
+<p>Пошук за Ключовими словами <b id="keywords"></b></p>
+<p>Всього знайдено <span id="searchResultsNum"></span> результатів.</p>
+
+<ol id="resultsContainer"></ol>
+
+<script>
+    const pages = [
+        {% for page in site.pages %}
+            {% if page.title != nil and page.url != "/search" and page.url != "/404.html" %}
+                {
+                    title: "{{ page.title | escape }}",
+                    location: "{{ page.url }}",
+                    content: `{{ page.content | strip_html | strip_newlines | replace: '-',' ' }}`
+                } {% unless forloop.last %},{% endunless %}
+            {% endif %}
+        {% endfor %}
+    ];
+
+    function getUrlParams() {
+        const search = window.location.search;
+        const hashes = search.slice(search.indexOf('?') + 1).split('&');
+        const result = {};
+        hashes.map(hash => {
+            const [key, val] = hash.split('=');
+            result[key] = decodeURIComponent(val).replace('+', ' ');
+        });
+        return result;
+    }
+
+    const { search } = getUrlParams();
+
+    let searchResults = [];
+    pages.map(({ title, location, content }, index) => {
+        if (content.indexOf(search) !== -1) {
+            searchResults.push({
+                title, location,
+                pageIndex: index,
+                position: content.indexOf(search)
+            });
+        }
+    });
+
+    document.getElementById('keywordsInput').value = search;
+    document.getElementById('keywords').innerHTML = search;
+    document.getElementById('searchResultsNum').innerHTML = searchResults.length;
+
+    // TODO: доделать
+    searchResults.map(it => {
+        document.getElementById('resultsContainer').innerHTML += `<li>
+            <a href="${it.location}">${it.title}</a>
+            <p>
+                ...
+                ${pages[it.pageIndex].content.slice(it.position-120, it.position)}
+                ${search}${pages[it.pageIndex].content.slice(it.position+search.length, it.position+search.length+30)}
+                ...
+            </p>
+        </li>`;
+    });
+</script>
