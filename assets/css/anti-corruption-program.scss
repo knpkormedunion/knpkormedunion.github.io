@@ -2,12 +2,20 @@
 # Anti corruption program page's styles
 ---
 
-h1, h2:not(:first-child) {
-    text-align: center;
-    font-size: 12.16px;
-}
+@import 'colors';
 
-h3 {
-    font-size: 12.16px;
-    font-weight: normal;
+.main__content {
+    h1, h2 {
+        text-align: center;
+        font-size: 12.16px;
+    }
+    
+    h1 {
+        color: map-get($colors, secondary);
+    }
+    
+    h3 {
+        font-size: 12.16px;
+        font-weight: normal;
+    }
 }

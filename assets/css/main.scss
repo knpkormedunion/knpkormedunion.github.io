@@ -2,10 +2,7 @@
 # Main site's styles
 ---
 
-$colors: (
-    "primary": #488ff0,
-    "secondary": #4ca69d
-);
+@import 'colors';
 
 html, body {
     width: 100%;
@@ -21,34 +18,30 @@ body {
 	line-height: 1.4em;
 
     color: #666;
-    background: #fff linear-gradient(
-        #fff 50px, 
-        #EDEDED 64px, 
-        #fff 0px,
-        #D0EAFF 0px,
-        #D0EAFF 80px,
-        #fff 300px) no-repeat;
+    // background: #fff linear-gradient(
+    //     #fff 50px, 
+    //     #EDEDED 64px, 
+    //     #fff 0px,
+    //     map-get($colors, secondary) 0%,
+    //     map-get($colors, secondary) 50%,
+    //     #fff) no-repeat;
+    background: #fff linear-gradient(map-get($colors, secondary), #fff 45%) no-repeat;
 
     &::before {
         content: "";
         position: absolute;
-        top: 64px;
-        left: 0;
-        right: 0;
-        height: 1px;
-        border: 1px 0 solid #e9e9e9;
-        background-color: #fff;
-    }
-
-    &::after {
-        z-index: -1;
-        content: "";
-        position: absolute;
-        top: 77.3px;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background-color: #E8F4FF;
+        top: 0;
+        width: 100%;
+        
+        height: 64px;
+        background: linear-gradient(#fff 75%, #ededed);
+        border-bottom: 3px solid #e9e9e9;
+        border-left: 0; border-right: 0;
+        
+        // top: 64px;
+        // height: 1px;
+        // border: 1px solid #e9e9e9;
+        // background-color: #fff;
     }
 }
 
@@ -100,13 +93,14 @@ img.img {
 .wrapper {
     margin: 0 auto;
 	padding: 0 52px 60px;
-    background: url(../images/wrapper.png) no-repeat top center;
     width: 978px;
 
     &__content {
         position: relative;
         padding: 0 11px;
         border: 1px solid #DCDADA;
+        border-top: 0;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
         background-color: #fff;
         border-radius: 0 0 6px 6px;
     }
@@ -262,7 +256,7 @@ aside, main {
 
 main {
     flex: 3;
-    padding: 20px 10px 40px;
+    padding: 20px 15px 40px;
 }
 
 .content {

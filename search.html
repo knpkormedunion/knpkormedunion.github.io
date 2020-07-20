@@ -6,7 +6,7 @@ layout: default
 
 <form action="/search" method="get">
     <label>
-        Пошук за ключовими словами:
+        Пошук за Ключовими словами:
         <input type="text" id="keywordsInput" name="search">
         <button>Пошук</button>
     </label>
@@ -18,18 +18,6 @@ layout: default
 <ol id="resultsContainer"></ol>
 
 <script>
-    const pages = [
-        {% for page in site.pages %}
-            {% if page.title != nil and page.url != "/search" and page.url != "/404.html" %}
-                {
-                    title: "{{ page.title | escape }}",
-                    location: "{{ page.url }}",
-                    content: `{{ page.content | strip_html | strip_newlines | replace: '-',' ' }}`
-                } {% unless forloop.last %},{% endunless %}
-            {% endif %}
-        {% endfor %}
-    ];
-
     function getUrlParams() {
         const search = window.location.search;
         const hashes = search.slice(search.indexOf('?') + 1).split('&');
@@ -40,6 +28,27 @@ layout: default
         });
         return result;
     }
+
+    function cutText(text, firstSliceParams, lastSliceParams) {
+        return text
+            .slice(...firstSliceParams)
+            .split(' ')
+            .filter(it => it.length)
+            .slice(...lastSliceParams)
+            .join(' ');
+    }
+
+    const pages = [
+        {% for page in site.pages %}
+            {% if page.title != nil and page.url != "/search" and page.url != "/404.html" %}
+                {
+                    title: "{{ page.title | escape }}",
+                    location: "{{ page.url }}",
+                    content: "{{ page.content | strip_html | strip_newlines | replace: '-',' ' }}"
+                }{% unless forloop.last %},{% endunless %}
+            {% endif %}
+        {% endfor %}
+    ];
 
     const { search } = getUrlParams();
 
@@ -58,16 +67,20 @@ layout: default
     document.getElementById('keywords').innerHTML = search;
     document.getElementById('searchResultsNum').innerHTML = searchResults.length;
 
-    // TODO: доделать
+    let searchResultList = '';
     searchResults.map(it => {
-        document.getElementById('resultsContainer').innerHTML += `<li>
+        const pageContent = pages[it.pageIndex].content;
+        searchResultList += `<li>
             <a href="${it.location}">${it.title}</a>
             <p>
                 ...
-                ${pages[it.pageIndex].content.slice(it.position-120, it.position)}
-                ${search}${pages[it.pageIndex].content.slice(it.position+search.length, it.position+search.length+30)}
+                ${cutText(pageContent, [it.position-200, it.position], [1])}
+                <b>${search}</b>
+                ${cutText(pageContent, [it.position+search.length, it.position+search.length+200], [0, -1])}
                 ...
             </p>
         </li>`;
     });
+
+    document.getElementById('resultsContainer').innerHTML = searchResultList;
 </script>

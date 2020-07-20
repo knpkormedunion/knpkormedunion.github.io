@@ -4,7 +4,16 @@ layout: default
 permalink: /anti-corruption-program
 ---
 
-# ТИПОВА АНТИКОРУПЦІЙНА ПРОГРАМА ЮРИДИЧНОЇ ОСОБИ
+<div style="width: 160px; margin: 0 0 20px auto; border: 1px solid #000">
+    <p style="font-weight: bold; padding: 2px; margin: 0;">
+        Зареєстровано в Міністерстві<br>
+        юстиції України<br>
+        09 березня 2017 р.<br>
+        за № 326/30194
+    </p>
+</div>
+
+# ТИПОВА АНТИКОРУПЦІЙНА ПРОГРАМА<br/>юридичної особи
 
 ## Преамбула
 
