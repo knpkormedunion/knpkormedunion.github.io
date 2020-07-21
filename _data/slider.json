@@ -1,27 +1,17 @@
 [
     {
-        "label": "Психіатрія",
-        "linkTo": "/",
-        "imageUrl": "/images/banners/psycho2.jpg"
+        "imageUrl": "/images/banners/image17.jpeg"
     },
     {
-        "label": "Наркологія",
-        "linkTo": "/",
-        "imageUrl": "/images/banners/narco.jpg"
+        "imageUrl": "/images/banners/image23.jpeg"
     },
     {
-        "label": "Нейрохірургія",
-        "linkTo": "/",
-        "imageUrl": "/images/banners/neiro.jpg"
+        "imageUrl": "/images/banners/image28.jpeg"
     },
     {
-        "label": "Реабілітація",
-        "linkTo": "/",
-        "imageUrl": "/images/banners/reabi.jpg"
+        "imageUrl": "/images/banners/image35.jpeg"
     },
     {
-        "label": "Геронтологічне відділення",
-        "linkTo": "/",
-        "imageUrl": "/images/banners/geronto.jpg"
+        "imageUrl": "/images/banners/image38.jpeg"
     }
 ]
