@@ -28,6 +28,10 @@
         "label": "Структура закладу",
         "links": [
             {
+                "label": "Апарат Управління лікувального закладу",
+                "to": "/structure/management"
+            },
+            {
                 "label": "Психіатричне відділення №1",
                 "to": "/structure/psychiatric-department-1"
             },
@@ -74,10 +78,6 @@
             {
                 "label": "Приймальне відділення",
                 "to": "/structure/reception-department"
-            },
-            {
-                "label": "Апарат Управління лікувального закладу",
-                "to": "/structure/management"
             }
         ]
     },
@@ -85,12 +85,20 @@
         "label": "Наукова інформація",
         "links": [
             {
+                "label": "Наукова інформація",
+                "to": "/scientific-information"
+            },
+            {
                 "label": "План держзакупівель",
                 "to": "/scientific-information/public-procurement-plan"
             },
             {
                 "label": "Потрібна допомога",
                 "to": "/scientific-information/need-help"
+            },
+            {
+                "label": "Оголошення",
+                "to": "/scientific-information/announcement"
             },
             {
                 "label": "Наші партнери",
