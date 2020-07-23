@@ -77,7 +77,7 @@
             },
             {
                 "label": "Апарат Управління лікувального закладу",
-                "to": "/management"
+                "to": "/structure/management"
             }
         ]
     },
