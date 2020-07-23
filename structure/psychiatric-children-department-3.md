@@ -4,8 +4,8 @@ layout: default
 permalink: /structure/psychiatric-children-department-3
 ---
 
-![{{ site.title }}](/images{{ page.permalink }}/1.jpg)
-![{{ site.title }}](/images{{ page.permalink }}/2.jpg)
+![1.jpg](/images{{ page.permalink }}/1.jpg)
+![2.jpg](/images{{ page.permalink }}/2.jpg)
 
 **ДИТЯЧЕ відділення на базі КНП КОР «Київської обласної психіатричної лікарні №2» (с.м.т Ворзель, вул. Паркова,4)** створене і працює з ціллю надання спеціалізованої допомоги дітям з порушеннями вищих психічних функцій органічного і функціонального ґенезу, впровадження принципів комплексної системи лікування і реабілітації в подальшому.
 

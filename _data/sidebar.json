@@ -74,6 +74,10 @@
             {
                 "label": "Приймальне відділення",
                 "to": "/structure/reception-department"
+            },
+            {
+                "label": "Апарат Управління лікувального закладу",
+                "to": "/management"
             }
         ]
     },
