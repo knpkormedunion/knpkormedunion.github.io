@@ -12,6 +12,9 @@ defaults:
 sass:
   style: compressed
 
+plugins:
+  - jekyll-seo-tag
+
 exclude:
   - run.sh
   - site-data/
