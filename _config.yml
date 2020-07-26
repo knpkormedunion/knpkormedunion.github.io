@@ -2,19 +2,17 @@ title: КНП КОР "КОПНЛ №2"
 fulltitle: Комунальне некомерційне підприємство Київської обласної ради "Київська обласна психоневрологічна лікарня №2"
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://knpkormedunion.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+lang: "uk_UA"
 
 defaults:
   - scope:
       path: "assets/images"
     values:
       image: true
-
 sass:
   style: compressed
-
 plugins:
   - jekyll-seo-tag
-
 exclude:
   - run.sh
   - site-data/
