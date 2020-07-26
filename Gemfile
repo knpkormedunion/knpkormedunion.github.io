@@ -15,7 +15,8 @@ gem "minima", "~> 2.5"
 gem "github-pages", "~> 206", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem 'jekyll-seo-tag'
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
   gem "jekyll-feed", "~> 0.12"
 end
 

@@ -13,6 +13,7 @@ sass:
   style: compressed
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 exclude:
   - run.sh
   - site-data/
