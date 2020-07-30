@@ -6,6 +6,8 @@
 		<link rel="stylesheet" href="/assets/css/main.css">
 		{% if page.url == "/" %}
 			<meta name="google-site-verification" content="w2DPTxzmh0HKmI4iSCV4P-n1G89IKCKwryYzn_NPYbk" />
+        {% elsif page.url == "/search" %}
+            <meta name="robots" content="noindex">
         {% elsif page.url == "/anti-corruption-program" %}
             <link rel="stylesheet" href="/assets/css/anti-corruption-program.css">
         {% endif %}
